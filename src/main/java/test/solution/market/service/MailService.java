@@ -26,7 +26,6 @@ public class MailService {
     public void sendEmailToClient(String clientEmail, String subject, String body) {
         try {
             sendEmail(clientEmail, subject, body);
-            log.info("Email отправлен клиенту: {}", clientEmail);
         } catch (MessagingException e) {
             log.error("Ошибка отправки письма клиенту: {}", e.getMessage());
         }
@@ -35,7 +34,6 @@ public class MailService {
     public void sendEmailToAdmin(String subject, String body) {
         try {
             sendEmail(adminEmail, subject, body);
-            log.info("Email отправлен администратору: {}", adminEmail);
         } catch (MessagingException e) {
             log.error("Ошибка отправки письма администратору: {}", e.getMessage());
         }
